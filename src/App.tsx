@@ -1,19 +1,12 @@
-import { MainButton, useShowPopup } from '@vkruglikov/react-telegram-web-app';
 import './App.css'
-
-
+import Height from './containers/Height'
+import MainLayout from './containers/MainLayout'
 function App() {
-  const showPopup = useShowPopup();
 
-  const handleClick = () =>
-    showPopup({
-      message: 'Hello, I am popup',
-    });
   return (
-    <div>
-      <h1>My React Telegram Web App</h1>
-      <MainButton text="SHOW POPUP" onClick={handleClick} />
-    </div>
+    <MainLayout>
+      <Height />
+    </MainLayout>
   )
 }
 
