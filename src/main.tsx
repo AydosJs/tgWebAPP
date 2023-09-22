@@ -6,6 +6,7 @@ import './index.css'
 
 
 import { Telegram } from "@twa-dev/types"
+import { BrowserRouter } from 'react-router-dom';
 
 declare global {
   interface Window {
@@ -15,8 +16,10 @@ declare global {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <WebAppProvider>
-      <App />
-    </WebAppProvider>
+    <BrowserRouter>
+      <WebAppProvider>
+        <App />
+      </WebAppProvider>
+    </BrowserRouter>
   </React.StrictMode>,
 )

@@ -1,17 +1,13 @@
+import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 
-type Props = {
-  children: React.ReactElement
-}
-
-export default function MainLayout({ children }: Props) {
+export default function MainLayout() {
   return (
     <div className="flex flex-col min-h-screen space-y-4 bg-white displays">
       <Header />
-      <main className="min-h-screen p-6">
-        {children}
+      <main className="p-6 min-h-[calc(100vh_-_104px)]">
+        <Outlet />
       </main>
-
     </div>
   )
 }

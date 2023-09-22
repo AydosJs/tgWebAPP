@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Region() {
 
   const styledBg = {
@@ -17,11 +19,11 @@ export default function Region() {
         <div>
           <h1 className="text-2xl font-semibold ">Yashash joyingiz</h1>
         </div>
-        <form className="w-full">
+        <form className="w-full ">
           <div className="flex flex-col divide-y">
 
             {['Toshkent shahri', 'Toshkent viloyati', 'Andijon viloyati', 'Buxoro viloyati', 'Jizzax viloyati', 'Qashqadaryo viloyati', 'Navoiy viloyati', 'Namangan viloyati', 'Samarqand viloyati', 'Surxondaryo viloyati', 'Sirdaryo viloyati', 'Sirdaryo viloyati', 'Sirdaryo viloyati', `Qoraqalpog'iston Respublikasi`].map((item, index) => (
-              <div className="flex flex-row items-center justify-between py-4 border-b">
+              <div key={index} className="flex flex-row items-center justify-between py-4 border-b">
                 <label htmlFor={`country-option-${index}`} className="block">
                   {item}
                 </label>
@@ -34,11 +36,13 @@ export default function Region() {
 
       </div >
       <div className="w-full mt-6">
-        <button
-          style={styledBg}
-          className="w-full px-4 py-4 font-bold text-white rounded-3xl">
-          Tasdiqlash
-        </button>
+        <Link to="/">
+          <button
+            style={styledBg}
+            className="w-full px-4 py-4 font-bold text-white rounded-3xl">
+            Tasdiqlash
+          </button>
+        </Link>
       </div>
     </div >
   )
