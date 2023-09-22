@@ -15,9 +15,7 @@ declare global {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <WebAppProvider options={{
-      smoothButtonsTransition: true,
-    }}>
+    <WebAppProvider>
       <App />
     </WebAppProvider>
   </React.StrictMode>,
