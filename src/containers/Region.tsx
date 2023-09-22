@@ -23,12 +23,12 @@ export default function Region() {
           <div className="flex flex-col divide-y">
 
             {['Toshkent shahri', 'Toshkent viloyati', 'Andijon viloyati', 'Buxoro viloyati', 'Jizzax viloyati', 'Qashqadaryo viloyati', 'Navoiy viloyati', 'Namangan viloyati', 'Samarqand viloyati', 'Surxondaryo viloyati', 'Sirdaryo viloyati', 'Sirdaryo viloyati', 'Sirdaryo viloyati', `Qoraqalpog'iston Respublikasi`].map((item, index) => (
-              <div key={index} className="flex flex-row items-center justify-between py-4 border-b">
-                <label htmlFor={`country-option-${index}`} className="block">
+              <label key={index} htmlFor={`country-option-${index}`} className="flex flex-row items-center justify-between block py-4 border-b">
+                <span>
                   {item}
-                </label>
+                </span>
                 <input id={`country-option-${index}`} type="radio" name="countries" value={item} className="w-4 h-4 accent-primary-900" aria-labelledby={`country-option-${index}`} aria-describedby={`country-option-${index}`} />
-              </div>
+              </label>
             ))}
           </div>
 
