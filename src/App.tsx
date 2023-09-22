@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import './App.css'
-import Height from './containers/Height'
 import MainLayout from './containers/MainLayout'
+import Region from './containers/Region';
 
 const tg = window.Telegram.WebApp;
 
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <MainLayout>
-      <Height />
+      <Region />
     </MainLayout>
   )
 }

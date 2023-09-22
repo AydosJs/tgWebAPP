@@ -6,9 +6,9 @@ type Props = {
 
 export default function MainLayout({ children }: Props) {
   return (
-    <div className="flex flex-col h-screen space-y-4 bg-white displays">
+    <div className="flex flex-col min-h-screen space-y-4 bg-white displays">
       <Header />
-      <main className="h-screen px-8">
+      <main className="min-h-screen p-6">
         {children}
       </main>
 
